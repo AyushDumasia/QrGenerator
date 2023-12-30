@@ -99,7 +99,7 @@ h1{
     }
 }
 
-@media screen and  (min-width:400px) and  (max-width :576px){
+@media screen and  (min-width:300px) and  (max-width :576px){
     body{
         background-image: linear-gradient(to bottom,rgb(0 109 137 / 70%), rgb(0 0 0 / 70%));
         height: 100vh;
