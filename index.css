@@ -79,7 +79,7 @@ h1{
     width: 200px;
     height: 17.6px;
     border-radius: 16px;
-    color: #474bff;
+    color: #767793;;
     border: 1.6px solid;
     position: relative;
     margin: 10px; 
@@ -101,7 +101,7 @@ h1{
 
 @media screen and  (min-width:300px) and  (max-width :576px){
     body{
-        background-image: linear-gradient(to bottom,rgb(0 109 137 / 70%), rgb(0 0 0 / 70%));
+        background-image: linear-gradient(to bottom,rgb(51 97 102 / 93%), rgb(0 0 0));
         height: 100vh;
         width: 100%;
         align-items : center;
@@ -109,9 +109,10 @@ h1{
         color: aliceblue;
     }
     h1{
-        margin-left: 105px;
+        display: none;
+        margin-left: 23%;
         width: 50%;
-        font-size: 25px;
+        font-size: 1.5rem;
     }
     .container{
         width: 80%;
