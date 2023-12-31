@@ -85,7 +85,7 @@ copyBtn.addEventListener("click",function(){
     }
 })
 
-let loader = document.querySelector(".progress");
+let loader = document.querySelector(".bars");
 qrImg.addEventListener("load",function(){
     loader.style.display = "none";
 })
