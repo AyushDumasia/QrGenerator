@@ -1,6 +1,7 @@
 let imgBox = document.querySelector("#imgBox");
 let qrImg = document.querySelector("#qrImg");
 let qrText = document.querySelector("#qrText");
+let qrHistory = [];
 function generateQR(){
     qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value;
 }
@@ -16,7 +17,7 @@ btn.addEventListener("click",function(){
         para.style.textDecoration = "none";
         warn.remove();
         qrText.style.border = "2px solid green";
-
+        showHistory();
     }
 });
 
@@ -46,6 +47,7 @@ reset.addEventListener("click",function(){
         qrText.value = "";
         qrImg.src = "";
         warn.remove();
+        historyBox.remove();
     }
 
 })
@@ -85,7 +87,7 @@ copyBtn.addEventListener("click",function(){
     }
 })
 
-let loader = document.querySelector(".bars");
+let loader = document.querySelector(".progress");
 qrImg.addEventListener("load",function(){
     loader.style.display = "none";
 })
@@ -104,3 +106,22 @@ downBtn.addEventListener("click",function(){
         document.body.removeChild(downloadLink);
     }
 })
+
+function showHistory(){
+    let historyBox = document.createElement("div");
+    let historyImg1  =document.querySelector(".historyImg");
+    historyBox.classList.add("historyBox");
+    historyBox.innerHTML = 
+        `<div class="historyBox">
+            <h4>${qrText.value}</h4>
+            <a herf = "${qrImg.src}" class = "imgURL">${qrImg.src}</a>
+            <img src="${qrImg.src}" alt="" class = "historyImg">
+        </div>`
+
+    let addBox1 = document.querySelector(".addBox");
+    addBox1.appendChild(historyBox);
+    console.log(qrText.value);
+    console.log(qrImg.src);
+    qrHistory.push(qrImg.src);
+
+}
