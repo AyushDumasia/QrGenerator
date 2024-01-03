@@ -9,4 +9,4 @@
   <li>Responsive Design</li>
 </ul>
 
-<p>Click <a href = "https://ayushdumasia.github.io/qrGenerator/">here </a>for visit website</p>
+<p>Click <a href = "https://ayushdumasia.github.io/qrGenerator/">here</a>for visit website</p>
