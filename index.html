@@ -11,27 +11,30 @@
     <link rel="icon" href="https://www.bing.com/images/search?view=detailV2&ccid=28IWve1P&id=38F23502818AF7E43650EF0B953BDA8E8DB4B2B9&thid=OIP.28IWve1Pqv7o7-ZusPN9iwHaHa&mediaurl=https%3a%2f%2fpngimg.com%2fuploads%2fqr_code%2fqr_code_PNG28.png&exph=1600&expw=1600&q=qrcode+icon&simid=608038950184092621&FORM=IRPRST&ck=43039B021BAAD6CC6F6211A4364F4617&selectedIndex=4&itb=1">
 </head>
 <body>
-    <h1 id = "mainTitle">QR Code Generator</h1>
-    <div class="container">
-        <p>Enter Text Or URL</p>
-        <div class="mainContainer">
-            <input type="text" placeholder="Enter Something" id="qrText">
+    <div id="page-1">
+        <h1 id = "mainTitle">QR Code Generator</h1>
+        <div class="container">
+            <p>Enter Text Or URL</p>
+            <div class="mainContainer">
+                <input type="text" placeholder="Enter Something" id="qrText">
+            </div>
+            <div class="imgBox">
+                <img src="" id="qrImg">
+                <div class="progress"></div>
+            </div>
+            <button id="btn" class="btns">Generate QR code</button>
+            <button id = "copybtn" class="btns">Copy URL</button>
+            <button id = "downloadbtn" class="btns">Download QR Code</button>
+            <button id = "resetbtn" class="btns">Reset</button>
+            <a href="#page-2">Show History</a>
         </div>
-        <div class="imgBox">
-            <img src="" id="qrImg">
-            <div class="progress"></div>
-        </div>
-        <button id="btn" class="btns">Generate QR code</button>
-        <button id = "copybtn" class="btns">Copy URL</button>
-        <button id = "downloadbtn" class="btns">Download QR Code</button>
-        <button id = "resetbtn" class="btns">Reset</button>
-        <a href="file:///D:/WebProjects/qrGeneratorIOfinal/historyPage.html" target="_blank">Show History</a>
     </div>
 
 
-
-    <div class="addBox">
-        <h1 id = "historyTitle">QR History</h1>
+    <div id="page-2">
+        <div class="addBox">
+            <h1 id = "historyTitle">QR History</h1>
+        </div>
     </div>
 
 <script src="index.js"></script>

@@ -1,7 +1,12 @@
 let imgBox = document.querySelector("#imgBox");
 let qrImg = document.querySelector("#qrImg");
 let qrText = document.querySelector("#qrText");
-let qrHistory = [];
+let qrHistory = [
+    {
+        hisImg :  qrImg.src,
+        hisText :  qrText.value,
+    }
+]
 function generateQR(){
     qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value;
 }
@@ -107,21 +112,19 @@ downBtn.addEventListener("click",function(){
     }
 })
 
-function showHistory(){
+function showHistory() {
     let historyBox = document.createElement("div");
-    let historyImg1  =document.querySelector(".historyImg");
+    let historyImg1 = document.querySelector(".historyImg");
     historyBox.classList.add("historyBox");
-    historyBox.innerHTML = 
-        `<div class="historyBox">
-            <h4>${qrText.value}</h4>
-            <a herf = "${qrImg.src}" class = "imgURL">${qrImg.src}</a>
-            <img src="${qrImg.src}" alt="" class = "historyImg">
-        </div>`
+    historyBox.innerHTML =
+        `<h4>${qrText.value}</h4>
+        <a href="${qrImg.src}" class="imgURL">${qrImg.src}</a>
+        <img src="${qrImg.src}" alt="" class="historyImg">
+        `;
 
     let addBox1 = document.querySelector(".addBox");
     addBox1.appendChild(historyBox);
     console.log(qrText.value);
     console.log(qrImg.src);
     qrHistory.push(qrImg.src);
-
 }
