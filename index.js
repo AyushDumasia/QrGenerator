@@ -112,7 +112,13 @@ downBtn.addEventListener("click",function(){
     }
 })
 
+let isHis = true;
+let addBox1 = document.querySelector(".addBox");
 function showHistory() {
+    if(isHis == true){
+        addBox1.innerHTML = ``;
+        isHis = false;
+    }
     let historyBox = document.createElement("div");
     let historyImg1 = document.querySelector(".historyImg");
     historyBox.classList.add("historyBox");
@@ -121,10 +127,18 @@ function showHistory() {
         <a href="${qrImg.src}" class="imgURL">${qrImg.src}</a>
         <img src="${qrImg.src}" alt="" class="historyImg">
         `;
-
-    let addBox1 = document.querySelector(".addBox");
-    addBox1.appendChild(historyBox);
+    addBox1.prepend(historyBox);
     console.log(qrText.value);
     console.log(qrImg.src);
     qrHistory.push(qrImg.src);
 }
+
+
+let historybtn = document.querySelector("#historybtn");
+historybtn.addEventListener("click",function(){
+    addBox1.innerHTML = `
+    <p class="afterdelete">History has been deleted</p>
+    `;
+    isHis = true;
+
+})

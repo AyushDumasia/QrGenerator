@@ -19,10 +19,6 @@ body{
     height: 100vh;
 }
 
-#page-2{
-    min-height: 100vh;
-    max-height: auto;
-}
 .container{
     display: flex;
     flex-direction: column;
@@ -113,6 +109,7 @@ body{
 }
 
 #historyTitle{
+    margin-top: 50px;
     text-align: center;
     color: white;
 }
@@ -126,8 +123,17 @@ body{
     padding: 20px;
 }
 
+#page-2{
+    min-height: 100vh;
+    max-height: auto;
+}
+
 .addBox{
-    /* height:200vh; */
+    padding: 20px;
+    min-height: 100vh;
+    max-height: auto;
+    margin: 10px;
+    background-color :rgba(140, 132, 132, 0.637);
 }
 .imgURL{
     color: red;
@@ -139,6 +145,12 @@ body{
     width: 150px;
     transition: all 1s ;
 }
+
+.afterdelete{
+    text-align: center;
+    font-size: 20px;
+}
+
 
 @media screen and  (min-width:300px) and  (max-width :576px){
     body{
