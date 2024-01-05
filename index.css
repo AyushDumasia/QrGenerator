@@ -1,18 +1,20 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     scroll-behavior: smooth;
+    color : rgb(24, 133, 211);
 }
 
 body{
-    background-image: linear-gradient(to bottom,rgb(2 0 96 / 70%), rgb(0 0 0));
+    background-image: linear-gradient(to RIGHT,rgb(4, 8, 43), #07365e);
     /* height: 100vh; */
     width: 100%;
     background-repeat:no-repeat;
     background-size:cover;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 #page-1{
@@ -23,18 +25,24 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vb;
-    margin: 65px auto;
-    background-color: rgba(240, 248, 255, 0.583);
+    width: 80vb;
+    padding: 10px;
+    margin: 20px auto;
+    background: linear-gradient(to left , rgb(24, 133, 211,0.1),rgb(4, 8, 43));
     text-align: center;
     border-radius: 8px;
 }
 
+.navbar{
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 5px 10px black;
+}
 #mainTitle{
     color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
-    top: 2.2rem;
+    /* top: 2.2rem; */
     font-size: 40px;
 }
 
@@ -69,7 +77,8 @@ body{
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background-color: rgb(49, 49, 142);
+    background-color: rgba(49, 49, 142, 0.164);
+    border : 1px solid rgb(24, 133, 211);
     color: white;
     margin-bottom: 10px;
     transition: margin 1s ;
@@ -116,11 +125,13 @@ body{
 
 .historyBox{
     display: flex;
-    background-color :rgba(140, 132, 132, 0.637);
+    background-image: linear-gradient(to left,rgb(4, 8, 43), #07365e);
     flex-direction: column;
-    border : 1px solid black;
+    border-radius: 5px;
+    /* border : 1px solid white; */
     margin: 10px;
     padding: 20px;
+    color: white;
 }
 
 #page-2{
@@ -129,11 +140,13 @@ body{
 }
 
 .addBox{
+    border-radius: 5px;
+
+    /* background: linear-gradient(to left , rgb(24, 133, 211,0.1),rgb(4, 8, 43)); */
     padding: 20px;
     min-height: 100vh;
     max-height: auto;
-    margin: 10px;
-    background-color :rgba(140, 132, 132, 0.637);
+    margin: 20px;
 }
 .imgURL{
     color: red;
@@ -154,13 +167,17 @@ body{
 
 @media screen and  (min-width:300px) and  (max-width :576px){
     body{
-        background-image: linear-gradient(to bottom,rgb(51 97 102 / 93%), rgb(0 0 0));
+        /* background-image: linear-gradient(to bottom,rgb(51 97 102 / 93%), rgb(0 0 0)); */
         /* height: 100vh; */
         width: 100%;
         align-items : center;
         text-align: center;
         color: aliceblue;
     }
+    .navbar{
+        display: none;
+    }
+
     #mainTitle{
         display: none;
         margin-left: 23%;
