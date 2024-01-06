@@ -7,8 +7,11 @@ let qrHistory = [
         hisText :  qrText.value,
     }
 ]
+let changeColor = document.querySelector("#color-input");
+let colorWithoutHash = "";
+
 function generateQR(){
-    qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value;
+    qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value +"&bgcolor=" + colorWithoutHash;
 }
 let btn = document.querySelector("#btn");
 btn.addEventListener("click",function(){
@@ -16,6 +19,7 @@ btn.addEventListener("click",function(){
         warning();
     }
     else{
+        colorWithoutHash = changeColor.value.split("#").join("");
         generateQR();
         qrImg.style.margin = "20px";
         para.style.fontSize = "15px";
@@ -142,3 +146,4 @@ historybtn.addEventListener("click",function(){
     isHis = true;
 
 })
+

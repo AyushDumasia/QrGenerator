@@ -64,11 +64,11 @@ body{
     padding-left: 10px;
     width: 90%;
     height: 40px;
-    border: 2px solid black;
+    border : 2px solid rgb(24, 133, 211);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ;
-
+    color: black;
 }
 
 .btns{
@@ -97,7 +97,7 @@ body{
     width: 200px;
     height: 17.6px;
     border-radius: 16px;
-    color: #050507;;
+    color: #ccccd6;;
     border: 1.6px solid;
     position: relative;
     margin: 30px; 
@@ -195,4 +195,23 @@ body{
     .historyImg{
         margin: auto;
     }
+}
+
+
+.color-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+}
+
+.color-box p{
+    font-weight: 100;
+}
+#color-input{
+    border-radius : 5px;
+    padding: 0;
+    border : none;
+    background-color : rgba(188, 215, 15, 0);
+
 }
