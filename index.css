@@ -4,11 +4,14 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     scroll-behavior: smooth;
-    color : rgb(24, 133, 211);
+    /* color : rgb(24, 133, 211);
+     */
+    color: #092635;
 }
 
 body{
-    background-image: linear-gradient(to RIGHT,rgb(4, 8, 43), #07365e);
+    /* background-image: linear-gradient(to RIGHT,rgb(4, 8, 43), #07365e); */
+    background-color : #9EC8B9;
     /* height: 100vh; */
     width: 100%;
     background-repeat:no-repeat;
@@ -28,7 +31,8 @@ body{
     width: 80vb;
     padding: 10px;
     margin: 20px auto;
-    background: linear-gradient(to left , rgb(24, 133, 211,0.1),rgb(4, 8, 43));
+    /* background: linear-gradient(to left , rgb(24, 133, 211,0.1),rgb(4, 8, 43)); */
+    background-color : #1B4242;
     text-align: center;
     border-radius: 8px;
 }
@@ -36,14 +40,12 @@ body{
 .navbar{
     padding: 10px;
     width: 100%;
-    box-shadow: 0px 5px 10px black;
 }
 #mainTitle{
-    color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
-    /* top: 2.2rem; */
     font-size: 40px;
+    font-weight: 300;
 }
 
 .mainContainer{
@@ -64,7 +66,7 @@ body{
     padding-left: 10px;
     width: 90%;
     height: 40px;
-    border : 2px solid rgb(24, 133, 211);
+    border : 2px solid black;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ;
@@ -77,8 +79,8 @@ body{
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background-color: rgba(49, 49, 142, 0.164);
-    border : 1px solid rgb(24, 133, 211);
+    background-color: #092635;
+    border : 1px solid black;
     color: white;
     margin-bottom: 10px;
     transition: margin 1s ;
@@ -97,7 +99,7 @@ body{
     width: 200px;
     height: 17.6px;
     border-radius: 16px;
-    color: #ccccd6;;
+    color: #0a0a0d;
     border: 1.6px solid;
     position: relative;
     margin: 30px; 
@@ -120,12 +122,12 @@ body{
 #historyTitle{
     margin-top: 50px;
     text-align: center;
-    color: white;
+    color: #092635;
 }
 
 .historyBox{
     display: flex;
-    background-image: linear-gradient(to left,rgb(4, 8, 43), #07365e);
+    background-color : #5C8374;
     flex-direction: column;
     border-radius: 5px;
     /* border : 1px solid white; */
@@ -141,8 +143,6 @@ body{
 
 .addBox{
     border-radius: 5px;
-
-    /* background: linear-gradient(to left , rgb(24, 133, 211,0.1),rgb(4, 8, 43)); */
     padding: 20px;
     min-height: 100vh;
     max-height: auto;
@@ -172,7 +172,7 @@ body{
         width: 100%;
         align-items : center;
         text-align: center;
-        color: aliceblue;
+        /* color: aliceblue; */
     }
     .navbar{
         display: none;
@@ -195,6 +195,22 @@ body{
     .historyImg{
         margin: auto;
     }
+    .historyBox{
+        padding: 5px;
+        /* padding: 0; */
+    }
+    .imgURL{
+        font-size: 10px;
+        text-wrap: wrap;
+    }
+    .addBox{
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+        min-height: 50vh;
+        max-height: auto;
+        margin: 10px;
+    }
 }
 
 
@@ -212,6 +228,6 @@ body{
     border-radius : 5px;
     padding: 0;
     border : none;
+    color : white;
     background-color : rgba(188, 215, 15, 0);
-
 }
