@@ -4,8 +4,6 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     scroll-behavior: smooth;
-    /* color : rgb(24, 133, 211);
-     */
 }
 
 body{
@@ -28,7 +26,6 @@ body{
     width: 80vb;
     padding: 10px;
     margin: 20px auto;
-    /* background: linear-gradient(to left , rgb(24, 133, 211,0.1),rgb(4, 8, 43)); */
     background-color : #1B4242;
     text-align: center;
     border-radius: 8px;
@@ -47,7 +44,7 @@ body{
     text-align: center;
     position: relative;
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 500;
     margin: auto;
 }
 .fa-clock-rotate-left{
@@ -75,7 +72,7 @@ body{
     padding-left: 10px;
     width: 90%;
     height: 40px;
-    border : 2px solid black;
+    border : none;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ;
@@ -89,7 +86,7 @@ body{
     border-radius: 8px;
     cursor: pointer;
     background-color: #092635;
-    border : 1px solid black;
+    border :none;
     color: white;
     margin-bottom: 10px;
     transition: margin 1s ;
@@ -204,7 +201,7 @@ body{
     .historyBox{
         color: white;
         padding: 5px;
-        width: 50%;
+        width: 90%;
     }
     .imgURL{
         font-size: 10px;
@@ -235,4 +232,5 @@ body{
     border : none;
     color : white;
     background-color : rgba(188, 215, 15, 0);
+    color : rgb(68, 68, 84);
 }
