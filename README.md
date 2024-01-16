@@ -10,4 +10,4 @@
   <li>Color Customizable</li>
 </ul>
 
-<p>Click <a href = "https://ayushdumasia.github.io/qrGenerator/">here </a>for visit website</p>
+<p>Click <a href = "https://ayushdumasia.github.io/QrGenerator/">here </a>for visit website</p>
