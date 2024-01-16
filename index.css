@@ -54,7 +54,16 @@ body{
 }
 
 .mainContainer{
+    display: flex;
+    justify-content: space-evenly;
     width: 100%;
+    align-items : center;
+}
+.fa-copy{
+    font-size: larger;
+}
+.fa-copy:active{
+    color : green;
 }
 
 .container p {
@@ -234,3 +243,25 @@ body{
     background-color : rgba(188, 215, 15, 0);
     color : rgb(68, 68, 84);
 }
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius : 10px;
+    background-color: #092635;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(158, 200, 185);
+}
+

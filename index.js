@@ -69,7 +69,7 @@ function warning(){
         warn.style.color = "red";
         warn.style.fontSize = "10px";
         warn.style.margin = "0px";
-        mainCon.append(warn);
+        mainCon.after(warn);
         warn.style.textDecoration = "underline";
         warn.style.textAlign = "end";
         qrText.style.border = "2px solid red";
@@ -79,7 +79,7 @@ function warning(){
     }
 }
 
-let copyBtn = document.querySelector("#copybtn");
+let copyBtn = document.querySelector(".fa-copy");
 copyBtn.addEventListener("click",function(){
     if(qrText.value == "" || qrImg.src == "file:///D:/WebDevlopment/JavaScriptProject/QRCodeGenerator/QRcodeGenerator.html"){
         warning();
