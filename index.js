@@ -75,9 +75,8 @@ reset.addEventListener("click",function(){
         warning();
     }
     else{
-        qrImg.style.margin = "0px";
         qrText.value = "";
-        qrImg.src = "";
+        qrImg.src = "resources/download.png"; 
         warn.remove();
         historyBox.remove();
     }
