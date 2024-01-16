@@ -61,6 +61,7 @@ body{
 }
 .fa-copy{
     font-size: larger;
+    margin: 0px 5px 0px 5px;
 }
 .fa-copy:active{
     color : green;
@@ -179,6 +180,10 @@ body{
     font-size: 20px;
 }
 
+#qrImg{
+    margin: 20px;
+}
+
 
 @media screen and  (min-width:300px) and  (max-width :576px){
     body{
@@ -188,6 +193,9 @@ body{
     }
     .navbar{
         display: none;
+    }
+    #qrText{
+        /* width: 50%; */
     }
 
     #mainTitle{

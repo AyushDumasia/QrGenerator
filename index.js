@@ -1,36 +1,62 @@
 let imgBox = document.querySelector("#imgBox");
 let qrImg = document.querySelector("#qrImg");
 let qrText = document.querySelector("#qrText");
+let historybtn = document.querySelector("#historybtn");
+let changeColor = document.querySelector("#color-input");
+let para = document.querySelector("p");
+let reset = document.querySelector("#resetbtn");
+let mainCon = document.querySelector(".mainContainer");
+let container = document.querySelector(".container");
+let copyBtn = document.querySelector(".fa-copy");
 let qrHistory = [
     {
         hisImg :  qrImg.src,
         hisText :  qrText.value,
     }
 ]
-let changeColor = document.querySelector("#color-input");
 let colorWithoutHash = "";
 
 function generateQR(){
-    qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrText.value +"&bgcolor=" + colorWithoutHash;
-}
-let btn = document.querySelector("#btn");
-btn.addEventListener("click",function(){
-    if(qrText.value == ""){
-        warning();
+    if(qrText.value !== ""){
+        colorWithoutHash = changeColor.value.split("#").join("");
+        qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value + "&bgcolor=" + colorWithoutHash;
     }
     else{
-        colorWithoutHash = changeColor.value.split("#").join("");
-        generateQR();
-        qrImg.style.margin = "20px";
-        para.style.fontSize = "15px";
-        para.style.textDecoration = "none";
-        warn.remove();
-        qrText.style.border = "2px solid green";
+        qrImg.src = "resources/download.png"; 
+    }
+}
+qrText.addEventListener("keyup",function(e){
+    colorWithoutHash = changeColor.value.split("#").join("");
+    generateQR();
+    qrImg.classList.add("qrImg");
+    para.style.fontSize = "15px";
+    para.style.textDecoration = "none";
+    warn.remove();
+    qrText.style.border = "2px solid green";
+    if(e.key == "Enter" && qrText.value == ""){
+        warning();
+    }
+    if(e.key == "Enter"){
         showHistory();
     }
-});
+})
+// let btn = document.querySelector("#btn");
+// btn.addEventListener("click",function(){
+//     if(qrText.value == ""){
+//         warning();
+//     }
+//     else{
+//         colorWithoutHash = changeColor.value.split("#").join("");
+//         generateQR();
+//         qrImg.style.margin = "20px";
+//         para.style.fontSize = "15px";
+//         para.style.textDecoration = "none";
+//         warn.remove();
+//         qrText.style.border = "2px solid green";
+//         showHistory();
+//     }
+// });
 
-let para = document.querySelector("p");
 para.addEventListener("click",function(){
     para.style.textDecoration = "underline";
     para.style.fontSize = "10px";
@@ -44,9 +70,6 @@ qrText.addEventListener("click",function(){
     
 })
 
-let reset = document.querySelector("#resetbtn");
-let mainCon = document.querySelector(".mainContainer");
-let container = document.querySelector(".container");
 reset.addEventListener("click",function(){
     if(qrText.value == ""){
         warning();
@@ -79,7 +102,6 @@ function warning(){
     }
 }
 
-let copyBtn = document.querySelector(".fa-copy");
 copyBtn.addEventListener("click",function(){
     if(qrText.value == "" || qrImg.src == "file:///D:/WebDevlopment/JavaScriptProject/QRCodeGenerator/QRcodeGenerator.html"){
         warning();
@@ -96,10 +118,10 @@ copyBtn.addEventListener("click",function(){
     }
 })
 
-let loader = document.querySelector(".progress");
-qrImg.addEventListener("load",function(){
-    loader.style.display = "none";
-})
+// let loader = document.querySelector(".progress");
+// qrImg.addEventListener("load",function(){
+//     loader.style.display = "none";
+// })
 
 let downBtn = document.querySelector("#downloadbtn");
 downBtn.addEventListener("click",function(){
@@ -138,7 +160,6 @@ function showHistory() {
 }
 
 
-let historybtn = document.querySelector("#historybtn");
 historybtn.addEventListener("click",function(){
     addBox1.innerHTML = `
     <p class="afterdelete">History has been deleted</p>
