@@ -117,10 +117,6 @@ copyBtn.addEventListener("click",function(){
     }
 })
 
-// let loader = document.querySelector(".progress");
-// qrImg.addEventListener("load",function(){
-//     loader.style.display = "none";
-// })
 
 let downBtn = document.querySelector("#downloadbtn");
 downBtn.addEventListener("click",function(){
@@ -144,6 +140,7 @@ function showHistory() {
         addBox1.innerHTML = ``;
         isHis = false;
     }
+    document.querySelector(".empty-history").innerText = "";
     let historyBox = document.createElement("div");
     let historyImg1 = document.querySelector(".historyImg");
     historyBox.classList.add("historyBox");
@@ -161,9 +158,8 @@ function showHistory() {
 
 historybtn.addEventListener("click",function(){
     addBox1.innerHTML = `
-    <p class="afterdelete">History has been deleted</p>
+    <p class="empty-history">History has been deleted</p>
     `;
     isHis = true;
-
 })
 

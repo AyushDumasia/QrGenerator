@@ -1,13 +1,14 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    /* font-weight: 300; */
     scroll-behavior: smooth;
+    color : white;
 }
 
 body{
-    background-color : #9EC8B9;
+    background-color : #000e1b;
     width: 100%;
     background-repeat:no-repeat;
     background-size:cover;
@@ -26,7 +27,7 @@ body{
     width: 80vb;
     padding: 10px;
     margin: 20px auto;
-    background-color : #1B4242;
+    background-color : #fefffe33;
     text-align: center;
     border-radius: 8px;
 }
@@ -44,7 +45,7 @@ body{
     text-align: center;
     position: relative;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 900;
     margin: auto;
 }
 .fa-clock-rotate-left{
@@ -75,7 +76,6 @@ body{
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ;
-    color : white;
 }
 
 #qrText{
@@ -97,7 +97,6 @@ body{
     cursor: pointer;
     background-color: #092635;
     border :none;
-    color: white;
     margin-bottom: 10px;
     transition: margin 1s ;
 }
@@ -136,9 +135,8 @@ body{
 }
 
 #historyTitle{
-    margin-top: 50px;
+    margin: 50px 0px 50px 0px;
     text-align: center;
-    color: #092635;
 }
 
 
@@ -149,14 +147,11 @@ body{
     padding: 20px;
     justify-content: space-evenly;
     margin: 10px auto;
-    background-color : #5C8374;
+    background-color : #fefffe33;
     border-radius : 5px;
 
 }
 
-.historyBox h4{
-    color: white;
-}
 
 .imgURL{
     margin-top:10px ;
@@ -182,6 +177,31 @@ body{
 
 #qrImg{
     margin: 20px;
+}
+.color-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+}
+
+.color-box p{
+    font-weight: 400;
+}
+#color-input{
+    border-radius : 5px;
+    padding: 0;
+    border : none;
+    background-color : rgba(188, 215, 15, 0);
+    color : rgb(68, 68, 84);
+}
+
+.empty-history{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 30px;
+    text-decoration: underline;
+    color : red;
 }
 
 
@@ -216,41 +236,25 @@ body{
         margin: 10px auto;
     }
     .historyBox{
-        color: white;
         padding: 5px;
         width: 90%;
     }
     .imgURL{
         font-size: 10px;
     }
-    .addBox{
+    /* .addBox{
         border-radius: 5px;
         padding: 10px;
         min-height: 50vh;
         max-height: auto;
         margin: 10px;
+    } */
+    .empty-history{
+        font-size: 20px;
     }
 }
 
 
-.color-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items : center;
-}
-
-.color-box p{
-    font-weight: 100;
-}
-#color-input{
-    border-radius : 5px;
-    padding: 0;
-    border : none;
-    color : white;
-    background-color : rgba(188, 215, 15, 0);
-    color : rgb(68, 68, 84);
-}
 
 
 
