@@ -237,7 +237,8 @@ body{
     }
     .historyBox{
         padding: 5px;
-        width: 90%;
+        width: 80%;
+        overflow: hidden;
     }
     .imgURL{
         font-size: 10px;
