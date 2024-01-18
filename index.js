@@ -112,8 +112,9 @@ copyBtn.addEventListener("click",function(){
         tempTextarea.select();
         document.execCommand("copy");
         tempTextarea.remove();
-        alert("URL copied to clipboard!");
         warn.remove();
+        showPopUp();
+        console.log("Copied");
     }
 })
 
@@ -164,3 +165,12 @@ historybtn.addEventListener("click",function(){
     isHis = true;
 })
 
+
+function showPopUp(){
+    let popUp = document.querySelector(".pop-up");
+    popUp.style.display = "block";
+
+    setTimeout(function(){
+        popUp.style.display = "none";
+    },500);
+}

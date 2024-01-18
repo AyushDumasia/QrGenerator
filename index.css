@@ -314,3 +314,19 @@ body{
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
+.pop-up{
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius : 5px;
+    padding:5px ;
+    border : 1px solid #997404;
+    background-color : rgb(51, 39, 1);
+    color : rgb(216, 222, 194);
+    display: none;
+    transition: all 1s ease-in-out;
+    width: 80%;
+    text-align: center;
+}
