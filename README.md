@@ -3,8 +3,8 @@
 
 <h3>Features : </h3>
 <ul>
-  <li>Copy URL button</li>
-  <li>Download QR Code button</li>
+  <li>Copy URL</li>
+  <li>Download QR Code</li>
   <li>Show previous History</li>
   <li>Responsive Design</li>
   <li>Color Customizable</li>
