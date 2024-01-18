@@ -126,7 +126,8 @@ downBtn.addEventListener("click",function(){
     else{
         let downloadLink = document.createElement("a");
         downloadLink.href = qrImg.src;
-        downloadLink.download = "download_image.jpg";
+        downloadLink.download = "computer";
+        downloadLink.type = "image/jpeg";
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);
